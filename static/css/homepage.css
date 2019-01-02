@@ -1,0 +1,24 @@
+html {
+  background: url(../img/home_page_background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bottom-left-button {
+  height: 100px;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+
+.bottom-right-button {
+  height: 100px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 80%;
+  left: 60%;
+}
+~

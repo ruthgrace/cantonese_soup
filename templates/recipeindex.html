@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+  <h1>Recipe Index</h1>
+  <ul id="recipes">
+    {% for recipe in recipes %}
+      <li><a href="recipe/{{ recipe }}">{{ recipe }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
