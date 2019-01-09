@@ -1,3 +1,44 @@
 {
-  "ingredient_name": {}
+  "pig_stomach": {
+    "english_name": "Pig stomach",
+    "chinese_name": "豬肚",
+    "english_description": "",
+    "chinese_description": ""
+  },
+  "pork_side_ribs": {
+    "english_name": "Pork side ribs",
+    "chinese_name": "排骨",
+    "english_description": "",
+    "chinese_description": ""
+  },
+  "white_pepper": {
+    "english_name": "White pepper",
+    "chinese_name": "白胡椒粒",
+    "english_description": "",
+    "chinese_description": ""
+  },
+  "red_dates": {
+    "english_name": "Red dates",
+    "chinese_name": "紅棗",
+    "english_description": "",
+    "chinese_description": ""
+  },
+  "ginger": {
+    "english_name": "Ginger",
+    "chinese_name": "薑",
+    "english_description": "",
+    "chinese_description": ""
+  },
+  "water": {
+    "english_name": "Water",
+    "chinese_name": "水",
+    "english_description": "",
+    "chinese_description": ""
+  },
+  "salt": {
+    "english_name": "Salt",
+    "chinese_name": "鹽",
+    "english_description": "",
+    "chinese_description": ""
+  }
 }
