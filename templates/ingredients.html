@@ -1,9 +1,28 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css">
 </head>
 <body>
-  search bar
-  <br>
-  table
+  <table>
+    <tr>
+      <th>English</th>
+      <th>Chinese</th>
+      <th>Recipes</th>
+      <th>Description</th>
+      <th>描述</th>
+    </tr>
+    {% for name, ingredient in ingredients.items() %}
+      <tr>
+        <td>{{ ingredient["english_name"]}}</td>
+        <td>{{ ingredient["chinese_name"]}}</td>
+        <td>{% for recipe in recipes[name] %}
+          <a href="/recipe/{{ recipe }}">{{ recipe }}</a> 
+          {% endfor %}
+        </td>
+        <td>{{ ingredient["english_description"] }}</td>
+        <td>{{ ingredient["chinese_description"] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
 </body>
 </html>
