@@ -1,8 +1,12 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css">
 </head>
 <body>
-  grid of icons with links to each recipe
+  <h1>Ailments</h1>
+  {% for cure in cures %}
+    <h2><a href="/recipe/{{ cures[cure] }}">{{ cure }}</a></h2>
+  {% endfor %}
   <div>
     <a href="recipeindex">Recipe Index</a>
   </div>
