@@ -14,24 +14,24 @@
       "white_pepper": {
         "english_quantity": "2 tablespoons",
         "chinese_quantity": ""
-      }
+      },
       "red_dates": {
         "english_quantity": "10",
         "chinese_quantity": "10"
-      }
+      },
       "ginger": {
         "english_quantity": "4 slices",
         "chinese_quantity": ""
-      }
+      },
       "water": {
         "english_quantity": "",
         "chinese_quantity": ""
-      }
+      },
       "salt": {
         "english_quantity": "",
         "chinese_quantity": ""
       }
-    }
+    },
     "english_instructions": [
       "Cut off the fat first.",
       "Clean pig stomach. Use coarse salt. (Some people use lime, lemon, starch). https://www.youtube.com/watch?v=rH534FOaF4I https://www.youtube.com/watch?v=KAnWCSXREQM",
@@ -48,7 +48,7 @@
       "把排骨放進熱水內煲2分鐘，除去異味。倒去水分，排骨再用清水沖 >洗。",
       "用細火爆香薑片和白胡椒碎約30秒",
       "加入水，豬肚，排骨，紅棗。大火煲滾，轉中火煲45至60分鐘。加鹽調味即成。",
-      "Ribs and pig stomach can be served with soya sauce or oyster sauce.",
+      "Ribs and pig stomach can be served with soya sauce or oyster sauce."
     ]
   }
 }
