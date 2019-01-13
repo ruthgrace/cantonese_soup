@@ -1,6 +1,38 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css">
 </head>
 <body>
+  {% if language==english %}
+    <a href="{{ recipe_name }}?language=chinese">中文</a>
+    <h1>{{ recipe["english_name"] }}</h1>
+    <h2>Ingredients</h2>
+    <ul>
+    {% for name in recipe["ingredients"] %}
+    <li>{{ recipe["ingredients"][name]["english_quantity"] }} {{ ingredients[name]["english_name"] }}</li>
+    {% endfor %}
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+    {% for step in recipe["english_instructions"] %}
+      <li>{{ step }}</li>
+    {% endfor %}
+    </ol>
+  {% else %}
+    <a href="{{ recipe_name }}?language=english">English</a>
+    <h1>{{ recipe["chinese_name"] }}</h1>
+    <h2>材料</h2>
+    <ul>
+    {% for name in recipe["ingredients"] %}
+    <li>{{ recipe["ingredients"][name]["chinese_quantity"] }} {{ ingredients[name]["chinese_name"] }}</li>
+    {% endfor %}
+    </ul>
+    <h2>方法</h2>
+    <ol>
+    {% for step in recipe["chinese_instructions"] %}
+      <li>{{ step }}</li>
+    {% endfor %}
+    </ol>
+  {% endif %}
 </body>
 </html>
