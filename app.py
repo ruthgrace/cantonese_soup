@@ -36,13 +36,36 @@ def get_recipe(recipe_name):
 def get_recipe_for_ailment(ailment):
     return CURES[ailment]
 
+def get_ingredients_from_recipe(recipe, recipes, ingredients):
+    show_names = recipes[recipe]["ingredients"].keys()
+    show_ingredients = {}
+    for ingredient in show_names:
+        show_ingredients[ingredient] = ingredients[ingredient]
+    return show_ingredients
+
 @app.route("/")
 def home():
     return render_template('index.html')
 
 @app.route("/ingredients")
 def ingredients():
-    return render_template('ingredients.html', ingredients=INGREDIENTS, recipes=RECIPES_PER_INGREDIENT)
+    # filter by ingredient
+    ingredient = request.args.get('ingredient', None)
+    recipe = request.args.get('recipe', None)
+    error_message = ""
+    show_ingredients = INGREDIENTS
+    if ingredient is not None:
+        if ingredient in INGREDIENTS:
+            show_ingredients = {ingredient: INGREDIENTS[ingredient]}
+            print("INGREDIENT INFO: " + str(show_ingredients))
+        else:
+            error_message = "Ingredient " + ingredient + " was not found, but here is the full ingredient list."
+    if recipe is not None:
+        if recipe in RECIPES:
+            show_ingredients = get_ingredients_from_recipe(recipe, RECIPES, INGREDIENTS)
+        else:
+            error_message = "Recipe " + recipe + " was not found, but here is the full ingredient list."
+    return render_template('ingredients.html', ingredient_doesnt_exist=error_message, ingredients=show_ingredients, recipes=RECIPES_PER_INGREDIENT)
 
 @app.route("/ailments")
 def ailments():
